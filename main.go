@@ -12,6 +12,7 @@ type Login struct {
 }
 
 func main() {
+
 	// 1.创建路由
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.New()
