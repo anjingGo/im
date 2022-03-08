@@ -7,4 +7,5 @@ import (
 
 func SetupRoute(router *gin.Engine)  {
 	routes.RegisterAPIRouter(router)
+	routes.RegisterWEBRouter(router)
 }
