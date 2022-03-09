@@ -16,7 +16,7 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.New()
 	// 加载模板
-	r.LoadHTMLGlob("resources/views/*/*.tmpl")
+	r.LoadHTMLGlob("resources/views/**/*.tmpl")
 	// 加载 css js 文件
 	r.Static("/static", "./public/static")
 

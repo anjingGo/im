@@ -1,20 +1,95 @@
 {{ define "app.tmpl" }}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ .title }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/app.css">
-    <script  type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-</head>
-<body>
-<h1>
-    {{ .title }}
-</h1>
-</body>
-</html>
-{{ end }}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {{template "/layouts/_header.tmpl"}}
+        <title>Document</title>
+    </head>
+    <body>
 
+
+    <body class="weui-form">
+    <div class="weui-form__control-area">
+        <div class="weui-cells__group weui-cells__group_form weui-cells__group_form-primary">
+            <div class="weui-cells">
+                <label class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><span class="weui-label">手机号</span></div>
+                    <div class="weui-cell__bd">
+                        <input id="phone" class="weui-input" placeholder="请输入手机号"/>
+                    </div>
+                </label>
+                <label class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><span class="weui-label">密码</span></div>
+                    <div class="weui-cell__bd">
+                        <input id="password" type="password" class="weui-input" placeholder="请输入密码"/>
+                    </div>
+                </label>
+                <label class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><span class="weui-label">密码确认</span></div>
+                    <div class="weui-cell__bd">
+                        <input id="js_input2" class="weui-input" placeholder="请输入再次输入密码"/>
+                    </div>
+                </label>
+            </div>
+
+            <div class="weui-cells__tips"><a class="weui-link weui-wa-hotarea" href="javascript:">已有账号去登录</a></div>
+
+            <div class="weui-form__tips-area">
+                <label id="weuiAgree" for="weuiAgreeCheckbox" class="weui-agree weui-wa-hotarea">
+                    <input id="weuiAgreeCheckbox" type="checkbox" class="weui-agree__checkbox"><span
+                            class="weui-agree__text">阅读并同意<a href="/example/" target="_blank">《相关条款》</a>
+        </span>
+                </label>
+            </div>
+
+            <div class="weui-form__opr-area">
+                <button class="weui-btn weui-btn_primary" type="button" id="showTooltips" wah-hotarea="click">注册</button>
+            </div>
+
+        </div>
+
+        <div class="weui-cells__group weui-cells__group_form weui-cells__group_form-primary">
+            <div class="weui-cells">
+                <label class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><span class="weui-label">手机号</span></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入手机号"/>
+                    </div>
+                </label>
+                <label class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><span class="weui-label">密码</span></div>
+                    <div class="weui-cell__bd">
+                        <input type="password" class="weui-input" placeholder="请输入密码"/>
+                    </div>
+                </label>
+
+            </div>
+            <label class="weui-cell">
+                <div class="weui-cells__tips weui-cell__bd">
+                    <a class="weui-link weui-wa-hotarea" href="javascript:">没有账号去注册</a>
+                </div>
+                <div class="weui-cells__tips weui-cell__ft">
+                    <a class="weui-link weui-wa-hotarea" href="javascript:">没有账号去注册</a>
+                </div>
+            </label>
+
+
+            <div class="weui-form__opr-area">
+                <button class="weui-btn weui-btn_primary" type="button" id="showTooltips" wah-hotarea="click">登录</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    </body>
+
+
+    </body>
+    </html>
+        {{template "/layouts/_footer.tmpl"}}
+{{ end }}
